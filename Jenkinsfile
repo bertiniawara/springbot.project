@@ -8,7 +8,6 @@ pipeline {
   stages {
     stage('Clean Workspace') {
       steps {
-        deleteDir()
         sshagent(credentials: [GIT_HUB_CREDENTIALS]) {
             sh "git clone --recursive git@github.com:bertiniawara/jenkins-CICD.git"
           }
