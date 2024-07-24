@@ -5,7 +5,7 @@ pipeline {
     stage('Clean Workspace') {
       steps {
         sshagent(credentials: [GIT_HUB_CREDENTIALS]) {
-            sh "git clone --recursive git@github.com:bertiniawara/jenkins-CICD.git"
+            sh "git clone --recursive https://github.com/bertiniawara/springbot.project.git"
           }
         echo "clone_project"
        }
